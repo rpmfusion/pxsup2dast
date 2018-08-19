@@ -1,6 +1,6 @@
 Name:           pxsup2dast
 Version:        20120704
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        Project X to dvdauthor subtitle converter
 
 License:        GPLv2
@@ -33,6 +33,9 @@ install -Dpm 755 pxsup2dast $RPM_BUILD_ROOT%{_bindir}/pxsup2dast
 
 
 %changelog
+* Sun Aug 19 2018 Leigh Scott <leigh123linux@googlemail.com> - 20120704-9
+- Rebuilt for Fedora 29 Mass Rebuild binutils issue
+
 * Fri Jul 27 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 20120704-8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
