@@ -1,0 +1,15 @@
+fix use of reserved keywords for C23
+based on https://github.com/MythTV/mythtv/commit/70cb82bc9ae06f59142efa7f047e2a73adfbc7d8
+
+--- ./pxsup2dast.c.orig	2025-08-02 03:13:44.402032716 +0100
++++ ./pxsup2dast.c	2025-08-02 03:15:32.428323494 +0100
+@@ -81,7 +81,9 @@ __END__;
+ */
+ #endif
+ 
++#if __STDC_VERSION__ < 202311L // C23
+ typedef enum { false = 0, true = 1 }	bool;
++#endif
+ typedef unsigned char			bool8;
+ 
+ 

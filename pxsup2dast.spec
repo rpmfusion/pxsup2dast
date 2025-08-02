@@ -6,6 +6,7 @@ Summary:        Project X to dvdauthor subtitle converter
 License:        GPLv2
 URL:            http://www.guru-group.fi/~too/sw/m2vmp2cut/
 Source0:        http://www.guru-group.fi/~too/sw/m2vmp2cut/pxsup2dast.c
+Patch1:         C23.patch
 
 BuildRequires:  perl
 BuildRequires:  zlib-devel
@@ -18,6 +19,7 @@ for use with dvdauthor.
 %prep
 %setup -c -T
 perl -pe 's/-O2/\$RPM_OPT_FLAGS \$RPM_LD_FLAGS/' %{SOURCE0} > %{name}.c
+%patch -P1 -p1
 
 
 %build
